@@ -2,9 +2,9 @@ import React, {FunctionComponent, useEffect, useState} from 'react';
 import Pokemon from "./models/pokemon";
 import POKEMONS from "./models/mock-pokemon";
 import PokemonList from "./Pages/pokemon-list";
-import {BrowserRouter as Router,Link,Switch,Route } from "react-router-dom";
+import {BrowserRouter as Router, Link, Switch, Route} from "react-router-dom";
 import PokemonsDetail from "./Pages/pokemon-detail";
-
+import PageNotFound from "./Pages/page-not-found";
 
 const App: FunctionComponent = () => {
 
@@ -37,12 +37,12 @@ const App: FunctionComponent = () => {
             {/*le système de gestion des routes dans notre application*/}
 
             <Switch>
-                <Route exact  path="/" component={PokemonList}/>
-                <Route exact  path="/pokemons" component={PokemonList}/>
-                <Route exact  path="/pokemons/:id" component={PokemonsDetail}/>
+                <Route exact path="/" component={PokemonList}/>
+                <Route exact path="/pokemons" component={PokemonList}/>
+                <Route path="/pokemons/:id" component={PokemonsDetail}/>
+                <Route component={PageNotFound}/>
             </Switch>
         </Router>
-
 
 
     )
