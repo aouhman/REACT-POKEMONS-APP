@@ -2,6 +2,9 @@ import React, {FunctionComponent, useEffect, useState} from 'react';
 import Pokemon from "./models/pokemon";
 import POKEMONS from "./models/mock-pokemon";
 import PokemonList from "./Pages/pokemon-list";
+import {BrowserRouter as Router,Link,Switch,Route } from "react-router-dom";
+import PokemonsDetail from "./Pages/pokemon-detail";
+
 
 const App: FunctionComponent = () => {
 
@@ -24,8 +27,22 @@ const App: FunctionComponent = () => {
 
 
     return (
+        <Router>
+            {/*page de navigation commun dans tout les pages*/}
+            <nav>
+                <div className="nav-wrapper teal">
+                    <Link to="/" className="brand-logo center">Home page</Link>
+                </div>
+            </nav>
+            {/*le système de gestion des routes dans notre application*/}
 
-                <PokemonList/>
+            <Switch>
+                <Route exact  path="/" component={PokemonList}/>
+                <Route exact  path="/pokemons" component={PokemonList}/>
+                <Route exact  path="/pokemons/:id" component={PokemonsDetail}/>
+            </Switch>
+        </Router>
+
 
 
     )
