@@ -7,30 +7,31 @@ import {useHistory} from "react-router-dom";
 
 type Props = {
     pokemon: Pokemon
-    borderColor?:string // ? c'est a dire que une property facultative
+    borderColor?: string // ? c'est a dire que une property facultative
 };
 
 
-
-const PokemonCard: FunctionComponent<Props> = ({pokemon,borderColor="#87CEEB"}) => {
+const PokemonCard: FunctionComponent<Props> = ({pokemon, borderColor = "#87CEEB"}) => {
 
     const [color, setColor] = useState<string>();
     const history = useHistory();
     const showBorder = () => {
-      setColor(borderColor)
+        setColor(borderColor)
     }
     const hideBorder = () => {
-      setColor('white')
+        setColor('white')
     }
 
-    function goToPokemon(id:number) {
+    function goToPokemon(id: number) {
         history.push(`/pokemons/${id}`);
     }
 
 
     return (
-        <div className="col s6 m4"  onClick={()=>{goToPokemon(pokemon.id)}} onMouseLeave={hideBorder} onMouseEnter={showBorder}>
-            <div className="card horizontal" style={{borderColor:color}} >
+        <div className="col s6 m4" onClick={() => {
+            goToPokemon(pokemon.id)
+        }} onMouseLeave={hideBorder} onMouseEnter={showBorder}>
+            <div className="card horizontal" style={{borderColor: color}}>
                 <div className="card-image">
                     <img src={pokemon.picture} alt={pokemon.name}/>
                 </div>
