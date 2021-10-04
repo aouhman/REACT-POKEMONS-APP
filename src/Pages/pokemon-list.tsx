@@ -1,4 +1,4 @@
-import React, { FunctionComponent, useState, useEffect } from 'react';
+import React, {FunctionComponent, useState, useEffect} from 'react';
 import Pokemon from '../models/pokemon';
 import POKEMONS from '../models/mock-pokemon';
 import PokemonCard from '../components/pokemon-card';
@@ -14,7 +14,7 @@ const PokemonList: FunctionComponent = () => {
         <div>
             <h1 className="center">Pokédex</h1>
             <div className="container">
-                <div className="row" >
+                <div className="row">
                     {pokemons.map(pokemon => (
                         <PokemonCard key={pokemon.id} pokemon={pokemon}/>
                     ))}

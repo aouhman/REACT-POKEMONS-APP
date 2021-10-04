@@ -44,5 +44,4 @@ const formatType = (type: string): string => {
 }
 
 
-
 export default formatType;
