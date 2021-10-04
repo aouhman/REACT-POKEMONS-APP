@@ -9,7 +9,7 @@ type Props = {
 const PokemonForm: FunctionComponent<Props> = ({pokemon}) => {
 
     const types: string[] = [
-        'Plante', 'Feu', 'Eau', 'Insecte', 'Normal', 'Electrik',
+        'Plante', 'Feu', 'Eau', 'Insecte', 'Normal', 'Electric',
         'Poison', 'Fée', 'Vol', 'Combat', 'Psy'
     ];
 
