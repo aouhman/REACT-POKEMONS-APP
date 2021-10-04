@@ -1,5 +1,5 @@
-import React, {FunctionComponent, useState, useEffect} from 'react';
-import {RouteComponentProps, Link} from 'react-router-dom';
+import React, {FunctionComponent, useEffect, useState} from 'react';
+import {Link, RouteComponentProps} from 'react-router-dom';
 import Pokemon from '../models/pokemon';
 import POKEMONS from '../models/mock-pokemon';
 import formatType from '../helpers/format-type';

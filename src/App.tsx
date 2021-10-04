@@ -2,7 +2,7 @@ import React, {FunctionComponent, useEffect, useState} from 'react';
 import Pokemon from "./models/pokemon";
 import POKEMONS from "./models/mock-pokemon";
 import PokemonList from "./Pages/pokemon-list";
-import {BrowserRouter as Router, Link, Switch, Route} from "react-router-dom";
+import {BrowserRouter as Router, Link, Route, Switch} from "react-router-dom";
 import PokemonsDetail from "./Pages/pokemon-detail";
 import PageNotFound from "./Pages/page-not-found";
 
